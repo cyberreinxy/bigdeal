@@ -1,0 +1,335 @@
+/* RESET & BASIC STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'BR Firma', sans-serif;
+    background-color: #fff;
+    color: #000;
+    line-height: 1.6;
+    user-select: none; /* For most browsers */
+    -webkit-user-select: none; /* For Safari */
+    -moz-user-select: none; /* For Firefox */
+    -ms-user-select: none; /* For IE/Edge */
+}
+
+/* Disable image dragging */
+img {
+    pointer-events: none;
+  }
+  
+  /* COLOR PALETTE */
+  :root {
+    --green: #9ce800;
+    --black: #000;
+    --white: #fff;
+  }
+  
+  /* CONTAINER */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  /* HEADER & NAVIGATION */
+  header {
+    background: var(--black);
+    color: var(--white);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 15px 0;
+  }
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Faktum Test', sans-serif;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    color: var(--green);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Styles for the search icon */
+.search {
+  width: 18px; /* Adjust size as needed */
+  padding-top: 3.5px;
+  height: auto;
+  cursor: pointer; /* Change the cursor to a pointer when hovering over the image */
+  transition: transform 0.3s ease; /* Optional: smooth zoom effect on hover */
+}
+  
+  /* HAMBURGER MENU */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 1px;
+  }
+  .hamburger .bar {
+    width: 25px;
+    height: 2.5px;
+    background: var(--green);
+    margin: 2.2px 0;
+    transition: 0.3s;
+  }
+  
+  /* NAV LINKS */
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  .nav-links li {
+    margin: 0 10px;
+  }
+  .nav-links li a {
+    color: var(--green);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  .nav-links li a:hover {
+    color: var(--white);
+  }
+  
+  /* HERO SECTION WITH BACKGROUND IMAGE AND OVERLAY */
+  .hero-section {
+    position: relative;
+    background: url('assets/background.png') no-repeat center center/cover;
+    color: var(--white);
+    padding: 120px 0 80px;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+    margin-top: 60px; /* offset fixed header */
+  }
+  .hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+  }
+  .hero-container {
+    position: relative;
+    z-index: 1;
+  }
+  .hero-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  .hero-container p {
+    font-size: 1.2rem;
+    margin: 0 auto 25px;
+    max-width: 700px;
+  }
+  .cta-btn {
+    margin-top: auto;
+    background: var(--black);
+    color: var(--green);
+    padding: 12px 30px;
+    border: 2px solid var(--black);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  .cta-btn:hover {
+    background: var(--green);
+    color: var(--black);
+  }
+  .welcome-message {
+    margin-top: 10px;
+    color: var(--green);
+    font-family: 'Faktum Test', sans-serif;
+    font-size: smaller;
+
+    .first {
+        color: #ffffff;
+    }
+  }
+
+
+  /* SECTION TITLES */
+  .section {
+    padding: 80px 0;
+  }
+  .section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    color: var(--black);
+  }
+  
+  /* CARD LAYOUT */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    align-items: stretch;
+    padding: 0 15px;
+  }
+  .card {
+    background: var(--white);
+    border: 2px solid var(--green);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  .card img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-bottom: 15px;
+  }
+  .card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  .card p {
+    flex-grow: 1;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .card .btn {
+    display: inline-block;
+    background: var(--green);
+    color: var(--black);
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 1px solid var(--black);
+    transition: background 0.3s ease, color 0.3s ease;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .card .btn:hover {
+    background: var(--black);
+    color: var(--white);
+  }
+  
+  /* BLOG CARD SPECIFICS */
+  .blog-card {
+    position: relative;
+    overflow: hidden;
+  }
+  .blog-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(156, 232, 0, 0.1);
+    transition: background 0.3s ease;
+  }
+  .blog-card:hover::after {
+    background: rgba(156, 232, 0, 0.2);
+  }
+  
+  /* CONTACT FORM */
+  .contact-form form {
+    max-width: 600px;
+    margin: auto;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    border: 2px solid var(--green);
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  .contact-form button {
+    background: var(--green);
+    color: var(--black);
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+  .contact-form button:hover {
+    background: var(--black);
+    color: var(--white);
+  }
+  
+  /* FOOTER */
+  footer {
+    background: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  /* FADE-IN ANIMATION */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* RESPONSIVE STYLES */
+  @media (max-width: 768px) {
+    /* Show hamburger */
+    .hamburger {
+      display: flex;
+    }
+    /* Hide desktop nav links until triggered */
+    .nav-links {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--black);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      z-index: 1001;
+    }
+    .nav-links.active {
+      display: flex;
+    }
+    .nav-links li {
+      margin: 15px 0;
+    }
+    .nav-links li a {
+      font-size: 1.5rem;
+    }
+    body.menu-open {
+      overflow: hidden;
+    }
+  }
+  

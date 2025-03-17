@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mr Bigdeal - Social Media Manager</title>
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- BR Firma Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=BR+Firma:400,700&display=swap" />
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/faktum-test">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.min.css">
+
+</head>
+<body>
+  <!-- Header and Navigation -->
+  <header>
+    <div class="container header-container">
+      <div class="logo"><a href="/index.html">Mr Bigdeal</a></div>
+      <nav>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home"><img class="search" src="assets/search.png" alt="search icon"></a>
+          </li>        
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Home Section with Background Image and Overlay -->
+    <section id="home" class="hero-section">
+      <div class="overlay"></div>
+      <div class="container hero-container">
+        <h1 class="welcome-message"><span class="first">Helloooo!</span><br> I am Mr Bigdeal, <br> a social media manager.</h1>
+        <p>
+            If you're looking for professional solution to manage and enhance your social media presence, here you’re in the right spot!
+            <br>
+            <br>
+        </p>
+        <a href="#contact" class="btn cta-btn">Let's Connect</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <h2>About Me</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Who I Am</h3>
+            <p>
+              I am Paul, Mr Bigdeal, a dedicated social media manager passionate about connecting brands with audiences in creative ways.
+            </p>
+            <a href="#contact" class="btn">Let's Connect</a>
+          </div>
+          <div class="card">
+            <h3>My Mission</h3>
+            <p>
+              Transforming digital presences with innovative strategies and compelling content that resonates deeply with your target audience.
+            </p>
+            <a href="#services" class="btn">My Services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section services-section">
+      <div class="container">
+        <h2>What I do</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Content Creation</h3>
+            <p>
+              Crafting creative and engaging content tailored to elevate your brand’s identity.
+            </p>
+            <a href="#portfolio" class="btn">View Work</a>
+          </div>
+          <div class="card">
+            <h3>Social Media Strategy</h3>
+            <p>
+              Comprehensive strategies built to amplify your social media presence with measurable results.
+            </p>
+            <a href="#blog" class="btn">Discover More</a>
+          </div>
+          <div class="card">
+            <h3>Analytics & Reporting</h3>
+            <p>
+              Data-driven insights and performance reports to steer your digital campaigns.
+            </p>
+            <a href="#contact" class="btn">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section portfolio-section">
+      <div class="container">
+        <h2>Happy Clients</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="assets/engagement.jpg" alt="Project One" />
+            <h3>Reinmax Creative</h3>
+            <p>A creative project that garnered prestigious awards for its innovative execution and impactful vision.</p>
+          </div>
+          <div class="card">
+            <img src="assets/engagement.jpg" alt="Project Two" />
+            <h3>NMB Bank PLC</h3>
+            <p>Successful campaign with over half a million impressions.</p>
+          </div>
+          <div class="card">
+            <img src="assets/engagement.jpg" alt="Project Three" />
+            <h3>Happy Delicious Cake</h3>
+            <p>A dynamic digital storytelling project that garnered awards.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="section blog-section">
+      <div class="container">
+        <h2>Blog</h2>
+        <div class="cards">
+          <div class="card blog-card">
+            <h3>Social Media Trends 2025</h3>
+            <p>
+              An overview of the emerging trends to keep you ahead of the curve.
+            </p>
+            <a href="news.html" class="btn">Read More</a>
+          </div>
+          <div class="card blog-card">
+            <h3>Creative Content Strategies</h3>
+            <p>
+              Tips and techniques for crafting compelling content that converts.
+            </p>
+            <a href="learn.html" class="btn">Learn More</a>
+          </div>
+          <div class="card blog-card">
+            <h3>Data-Driven Campaigns</h3>
+            <p>
+              How leveraging analytics can shape winning social media campaigns.
+            </p>
+            <a href="explore.html" class="btn">Explore</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="contact-form">
+          <form>
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <input id="phone" class="phone-input" type="tel" placeholder="Your Phone" required />
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Mr Bigdeal. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript File -->
+  <script src="scripts.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+
+</body>
+</html>
